@@ -1,10 +1,31 @@
-\frametitle{Verbatim}
-^^I^^I\begin{example}[Theorem Slide Code]
-^^I^^I^^I\begin{verbatim}
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-^^I^^I\end{example}
+\frametitle{表格与引用}
+\begin{columns}
+^^I^^I\column{.6\textwidth}
+^^I^^I\begin{lstlisting}[language=TeX]
+\begin{table}[htpb]
+  \centering
+  \caption{编号与含义}
+  \label{tab:number}
+  \begin{tabular}{cl}\toprule
+  列1 & 列2 \\\midrule
+  1 & a\\
+  2 & b\\\bottomrule
+  \end{tabular}
+\end{table}
+\normalsize 这里展示引用公式
+~(\ref{eq:vsphere})与引用表格
+~\ref{tab:number}。
+\end{lstlisting}
+^^I^^I\column{.35\textwidth}
+^^I^^I\begin{table}[htpb]
+^^I^^I^^I\centering
+^^I^^I^^I\caption{编号与含义}
+^^I^^I^^I\label{tab:number}
+^^I^^I^^I\begin{tabular}{cl}\toprule
+^^I^^I^^I^^I列1 & 列2 \\\midrule
+^^I^^I^^I^^I1  & a  \\
+^^I^^I^^I^^I2  & b  \\\bottomrule
+^^I^^I^^I\end{tabular}
+^^I^^I\end{table}
+^^I^^I\normalsize 这里展示引用公式~(\ref{eq:vsphere})与引用表格\ref{tab:number}。
+^^I\end{columns}
